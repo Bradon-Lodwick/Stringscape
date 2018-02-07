@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Tech Blog</title>
+  <!-- jquery import -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Bootstrap Stylesheets-->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/formValidation.min.css" rel="stylesheet">
+  <link href="css/morris.css" rel="stylesheet">
+
+  <!-- custom stylesheet -->
+  <link href="css/custom-stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- main navigation for the site -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">StringScape</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li>
+            <a href="articles.html" class="dropdown-toggle" data-toggle="dropdown">Articles<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="hardware.html?submit=Display+Articles#">Hardware</a></li>
+              <li><a href="programming.html?submit=Display+Articles#">Programming</a></li>
+              <li><a href="gaming.html?submit=Display+Articles#">Gaming</a></li>
+              <li><a href="hot-topics.html?submit=Display+Articles#">Hot Topics</a></li>
+            </ul>
+          </li>
+          <li><a href="submit-article.html">Submit An Article</a></li>
+          <li><a href="sign-up.php">Register</a></li>
+          <li><a href="Graphs.html">Scapetistics</a></li>
+          <li><a href="load.php">Load UserData</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div id="main-container" class="container">
+    <div class="row" style="margin-top:50px;">
+      <div class="col-md-12">
+        <form>
+          <div class="form-group">
+            <label for="category">Category:</label>
+            <select class="form-control" id="category">
+              <option selected="true">Hardware</option>
+              <option>Programming</option>
+              <option>Gaming</option>
+              <option>Hot Topics</option>
+            </select>
+            <br>
+            <input class="btn btn-primary" name="submit" type="submit" value="Display Articles" onclick="displayArticles()" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12" id="article-table-container">
+
+      </div>
+  </div>
+  <!--end of main container-->
+
+  <!-- Article display script -->
+  <script src="js/displayArticles.js"></script>
+
+  <!-- Bootstrap scripts -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/formValidation.min.js"></script>
+  <script src="js/framework/bootstrap.min.js"></script>
+  <script src="js/raphael-min.js"></script>
+  <script src="js/morris.min.js"></script>
+
+</body>
+</html>
